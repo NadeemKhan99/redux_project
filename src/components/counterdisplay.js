@@ -1,4 +1,5 @@
 import React from 'react';
+import Multiply from './secondcounter'
 import { useSelector } from 'react-redux';
 
 const DisplayCounter = () =>{
@@ -10,6 +11,7 @@ const DisplayCounter = () =>{
     return(
         <div>
             From second Viewer: {counter}
+            <Multiply />
         </div>
     )
 }

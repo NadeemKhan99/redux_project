@@ -20,6 +20,25 @@ export const counterSlice = createSlice({
     }
 });
 
+// multiply slice
+
+export const multiplySlice = createSlice({
+    name: "Multiply",
+    initialState: {
+        multiByFive: 1
+    },
+    reducers: {
+        multiply: (state) => {
+            state.multiByFive *= 5
+        },
+        divide: (state) => {
+            state.multiByFive /= 5
+        }
+    }
+})
 
 export const {increment, decrement, incrementByValue} = counterSlice.actions;
-export default counterSlice.reducer;
+export const counterReducer = counterSlice.reducer;
+
+export const {multiply, divide} = multiplySlice.actions;
+export const multiplyReducer = multiplySlice.reducer;
